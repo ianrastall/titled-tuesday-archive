@@ -1,7 +1,6 @@
 import os
 import shutil
 from pathlib import Path
-import glob
 
 def generate_tt_links(github_repo_dir, output_file):
     """Generate tt_links.txt with GitHub raw URLs for PGN files."""
@@ -37,24 +36,18 @@ def generate_tt_events_txt(pgn_dir, output_file):
         try:
             # Read the file to find Event tag
             with open(pgn_file, 'r', encoding='utf-8', errors='ignore') as f:
-                content = f.read()
-                # Find first [Event "..." ] tag
-                event_match = None
-                for line in content.split('\n'):
+                for line in f:
                     stripped_line = line.strip()
                     if stripped_line.startswith('[Event "') and not stripped_line.startswith('[EventDate'):
-                        event_match = stripped_line
+                        # Extract event name
+                        start = stripped_line.find('"') + 1
+                        end = stripped_line.rfind('"')
+                        if start > 0 and end > start:
+                            event_name = stripped_line[start:end]
+                            events.append(f"{filename}: {event_name}")
+                        else:
+                            events.append(f"{filename}: {stripped_line}")
                         break
-                
-                if event_match:
-                    # Extract event name from [Event "name"]
-                    start = event_match.find('"') + 1
-                    end = event_match.rfind('"')
-                    if start > 0 and end > start:
-                        event_name = event_match[start:end]
-                        events.append(f"{filename}: {event_name}")
-                    else:
-                        events.append(f"{filename}: {event_match}")
                 else:
                     events.append(f"{filename}: No Event tag found")
                     
@@ -94,7 +87,7 @@ def generate_tt_game_counts_txt(pgn_dir, output_file):
             print(f"Error reading {filename}: {e}")
             counts.append(f"{filename}: 0")
     
-    # Write to output file
+    # Write to output file (simple format with just number)
     with open(output_file, 'w', encoding='utf-8') as f:
         for count in counts:
             f.write(count + '\n')
