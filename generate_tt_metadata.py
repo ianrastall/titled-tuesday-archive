@@ -3,16 +3,16 @@ import shutil
 from pathlib import Path
 
 def generate_tt_links(github_repo_dir, output_file):
-    """Generate tt_links.txt with GitHub raw URLs for PGN files."""
+    """Generate tt_links.txt with GitHub raw URLs for ZIP files."""
     repo_path = Path(github_repo_dir)
     base_url = "https://github.com/ianrastall/titled-tuesday-archive/raw/main"
     
     links = []
     
-    # Walk through year folders recursively
-    for pgn_file in sorted(repo_path.glob('**/*.pgn')):
+    # Walk through all ZIP files in the repo
+    for zip_file in sorted(repo_path.glob('**/*.zip')):
         # Get relative path from repo root
-        rel_path = pgn_file.relative_to(repo_path)
+        rel_path = zip_file.relative_to(repo_path)
         url = f"{base_url}/{rel_path}"
         links.append(url)
     
@@ -28,11 +28,19 @@ def generate_tt_events_txt(pgn_dir, output_file):
     """Generate tt_events.txt by reading Event tags from PGNs."""
     pgn_path = Path(pgn_dir)
     
+    # Debug: print the directory we are looking in
+    print(f"Looking for PGN files in: {pgn_path.absolute()}")
+    
+    # Get list of PGN files
+    pgn_files = list(pgn_path.glob('**/*.pgn'))
+    print(f"Found {len(pgn_files)} PGN files")
+    
     events = []
     
     # Process all PGN files recursively
-    for pgn_file in sorted(pgn_path.glob('**/*.pgn')):
+    for pgn_file in sorted(pgn_files):
         filename = pgn_file.name
+        print(f"Processing: {filename}")
         try:
             # Read the file to find Event tag
             with open(pgn_file, 'r', encoding='utf-8', errors='ignore') as f:
@@ -87,7 +95,7 @@ def generate_tt_game_counts_txt(pgn_dir, output_file):
             print(f"Error reading {filename}: {e}")
             counts.append(f"{filename}: 0")
     
-    # Write to output file (simple format with just number)
+    # Write to output file
     with open(output_file, 'w', encoding='utf-8') as f:
         for count in counts:
             f.write(count + '\n')
@@ -96,23 +104,27 @@ def generate_tt_game_counts_txt(pgn_dir, output_file):
     return len(counts)
 
 def main():
-    # Configuration - adjust these paths as needed
+    # Configuration
     tt_archive_dir = r"D:\GitHub\titled-tuesday-archive"  # Your local clone of the repo
     chessnerd_dir = r"D:\GitHub\chessnerd"  # Your chessnerd website repo
+    pgn_source_dir = r"D:\chessnerd\tt"  # Your original PGN files
     
     print("Generating Titled Tuesday metadata files...\n")
     
-    # Generate files in titled-tuesday-archive directory
-    print("Creating files in titled-tuesday-archive repo...")
+    # Generate files
+    print("Creating metadata files...")
     tt_links_file = os.path.join(tt_archive_dir, "tt_links.txt")
     tt_events_file = os.path.join(tt_archive_dir, "tt_events.txt")
     tt_counts_file = os.path.join(tt_archive_dir, "tt_game_counts.txt")
     
+    # Regenerate links to ensure they're up to date
     links_count = generate_tt_links(tt_archive_dir, tt_links_file)
-    events_count = generate_tt_events_txt(tt_archive_dir, tt_events_file)
-    counts_count = generate_tt_game_counts_txt(tt_archive_dir, tt_counts_file)
     
-    # Copy files to chessnerd directory
+    # Generate events and counts from original PGNs
+    events_count = generate_tt_events_txt(pgn_source_dir, tt_events_file)
+    counts_count = generate_tt_game_counts_txt(pgn_source_dir, tt_counts_file)
+    
+    # Copy all files to chessnerd directory
     print(f"\nCopying files to chessnerd repo...")
     chessnerd_links = os.path.join(chessnerd_dir, "tt_links.txt")
     chessnerd_events = os.path.join(chessnerd_dir, "tt_events.txt")
@@ -136,9 +148,16 @@ def main():
     print(f"  - {tt_archive_dir}")
     print(f"  - {chessnerd_dir}")
     print("\nNext steps:")
-    print("1. Commit and push titled-tuesday-archive repo")
-    print("2. Commit and push chessnerd repo")
-    print("3. Your Titled Tuesday Archive page will automatically use the updated data")
+    print("1. Commit and push titled-tuesday-archive repo:")
+    print("   cd D:\GitHub\titled-tuesday-archive")
+    print("   git add tt_links.txt tt_events.txt tt_game_counts.txt")
+    print("   git commit -m 'Add metadata files'")
+    print("   git push")
+    print("2. Commit and push chessnerd repo:")
+    print("   cd D:\GitHub\chessnerd")
+    print("   git add tt_links.txt tt_events.txt tt_game_counts.txt")
+    print("   git commit -m 'Update Titled Tuesday metadata'")
+    print("   git push")
 
 if __name__ == "__main__":
     main()
