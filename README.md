@@ -17,10 +17,11 @@ Counts include the game records in the PGN, including zero-move results.
 
 ## Add missing events later
 
-Use Python 3.10 or newer. Preview selected new files first:
+Use Python 3.10 or newer. Preview selected new files first. For example, once a
+September 8 PGN is available:
 
 ```powershell
-python archive_metadata.py --import-pgn D:\chessnerd\tt\260714-titled-tuesday.pgn
+python archive_metadata.py --import-pgn D:\chessnerd\tt\260908-titled-tuesday.pgn
 ```
 
 Once that missing PGN is available, add `--write` to import it and regenerate
@@ -49,6 +50,12 @@ from `D:\chessnerd\tt`, 26 other files from
 `D:\dev\pgn\cc-events-new`. The duplicate January 6 export in the second folder
 was not imported. Each added ZIP preserves its selected source PGN bytes.
 
-Dates without a local file at import time through September 1: **July 14, July 21,
-and September 1, 2026**. This list records missing files, not verified tournament
-scheduling or a claim of complete game coverage for the files present.
+The follow-up import added the newly supplied **July 14, July 21, and September 1,
+2026** files from `D:\dev\pgn\cc-events-new` (6,259 games). The July 7 ZIP was
+refreshed from that folder's newer export, preserving its 1,805 games while
+updating source links and adding end timestamps. The supplied July 28 and four
+August PGNs already matched their ZIPs byte for byte and were left as they were.
+
+The archive now contains **447 events and 825,726 games**, including 35 event
+files for 2026 through September 1. This describes the files present, not a claim
+of complete game coverage.

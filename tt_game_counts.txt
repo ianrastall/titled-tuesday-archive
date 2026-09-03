@@ -437,8 +437,11 @@ titled-tuesday-2026-06-16.pgn: 1988
 titled-tuesday-2026-06-23.pgn: 2098
 titled-tuesday-2026-06-30.pgn: 2005
 titled-tuesday-2026-07-07.pgn: 1805
+titled-tuesday-2026-07-14.pgn: 2065
+titled-tuesday-2026-07-21.pgn: 1852
 titled-tuesday-2026-07-28.pgn: 1817
 titled-tuesday-2026-08-04.pgn: 1905
 titled-tuesday-2026-08-11.pgn: 2004
 titled-tuesday-2026-08-18.pgn: 2085
 titled-tuesday-2026-08-25.pgn: 2002
+titled-tuesday-2026-09-01.pgn: 2342
