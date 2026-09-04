@@ -5,9 +5,10 @@ https://chessnerd.net/titled-tuesday-archive.html and is not complete.
 ## Data and naming
 
 ZIPs live in year folders. Each contains one matching PGN, for example
-`2024/titled-tuesday-2024-01-02a.zip` → `titled-tuesday-2024-01-02a.pgn`.
-The suffix `a` means early and `b` means late. An absent suffix leaves the
-session unspecified; it does not imply that early and late have been combined.
+`2024/cc_titled-tuesday_240102a.zip` → `cc_titled-tuesday_240102a.pgn`.
+Filenames follow `cc_titled-tuesday_YYMMDD[a|b].(zip|pgn)`. The suffix `a` means
+early and `b` means late. An absent suffix leaves the session unspecified; it does
+not imply that early and late have been combined.
 
 `tt_manifest.json` is the website's structured source. `tt_links.txt`,
 `tt_events.txt`, and `tt_game_counts.txt` are generated compatibility exports.
@@ -29,8 +30,9 @@ metadata. The importer preserves the source file and its PGN bytes, verifies the
 ZIP, and refuses duplicate event dates/sessions. It supports these filename forms:
 
 - `YYMMDD[a|b]-titled-tuesday.pgn`
-- `titled-tuesday-YYYY-MM-DD[a|b].pgn`
+- `titled-tuesday-YYYY-MM-DD[a|b].pgn` (legacy canonical)
 - `YYYY-titled-tuesday-blitz-month-DD[-early|-late].pgn`
+- `cc_titled-tuesday_YYMMDD[a|b].pgn` (current canonical)
 
 Multiple file paths can follow `--import-pgn`. To rebuild metadata without adding
 PGNs, run `python archive_metadata.py --write`. Without `--write`, it only checks

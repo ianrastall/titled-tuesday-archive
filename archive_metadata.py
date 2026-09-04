@@ -12,7 +12,8 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-NAME = re.compile(r'^titled-tuesday-(\d{4}-\d{2}-\d{2})([ab]?)\.(?:pgn|zip)$')
+NAME = re.compile(r'^cc_titled-tuesday_(\d{2})(\d{2})(\d{2})([ab]?)\.(?:pgn|zip)$')
+LEGACY_NAME = re.compile(r'^titled-tuesday-(\d{4}-\d{2}-\d{2})([ab]?)\.(?:pgn|zip)$')
 SHORT_NAME = re.compile(r'^(\d{2})(\d{2})(\d{2})([ab]?)-titled-tuesday\.pgn$')
 EXPORT_NAME = re.compile(r'^(\d{4})-titled-tuesday-blitz-([a-z]+)-(\d{1,2})(?:-(early|late))?\.pgn$', re.I)
 EVENT = re.compile(rb'^\[Event "(.*)"\]\s*$', re.M)
@@ -21,6 +22,9 @@ SESSION = {'': '', 'a': 'early', 'b': 'late'}
 
 def archive_identity(filename: str) -> tuple[str, str]:
     match = NAME.fullmatch(filename)
+    if match:
+        return date(2000 + int(match[1]), int(match[2]), int(match[3])).isoformat(), match[4]
+    match = LEGACY_NAME.fullmatch(filename)
     if match:
         return date.fromisoformat(match[1]).isoformat(), match[2]
     match = SHORT_NAME.fullmatch(filename)
@@ -86,7 +90,7 @@ def main() -> None:
     pending = []
     for source in args.import_pgn:
         event_date, suffix = archive_identity(source.name)
-        filename = f'titled-tuesday-{event_date}{suffix}.zip'
+        filename = f'cc_titled-tuesday_{event_date[2:4]}{event_date[5:7]}{event_date[8:10]}{suffix}.zip'
         if filename in known:
             raise ValueError(f'Archive already exists or was selected twice: {filename}')
         content = source.read_bytes()

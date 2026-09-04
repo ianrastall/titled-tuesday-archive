@@ -8,6 +8,8 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(archive_identity('titled-tuesday-2024-01-02b.zip'), ('2024-01-02', 'b'))
         self.assertEqual(archive_identity('2026-titled-tuesday-blitz-august-25.pgn'), ('2026-08-25', ''))
         self.assertEqual(archive_identity('2024-titled-tuesday-blitz-january-02-late.pgn'), ('2024-01-02', 'b'))
+        self.assertEqual(archive_identity('cc_titled-tuesday_240102a.zip'), ('2024-01-02', 'a'))
+        self.assertEqual(archive_identity('cc_titled-tuesday_210504.pgn'), ('2021-05-04', ''))
 
     def test_event_identity_uses_the_event_filename(self):
         # Game Date tags can cross midnight or reflect later source corrections.
@@ -27,9 +29,9 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(pgn_metadata(content, strict=True), ('Titled Tuesday', 1))
 
     def test_metadata_links_use_forward_slashes(self):
-        entry = entry_metadata('titled-tuesday-2024-01-02a.zip', 'titled-tuesday-2024-01-02a.pgn', 'Titled Tuesday', 10, 'a' * 64)
+        entry = entry_metadata('cc_titled-tuesday_240102a.zip', 'cc_titled-tuesday_240102a.pgn', 'Titled Tuesday', 10, 'a' * 64)
         self.assertEqual(entry['session'], 'early')
-        self.assertIn('/2024/titled-tuesday-', render_metadata([entry])['tt_links.txt'])
+        self.assertIn('/2024/cc_titled-tuesday_240102a.zip', render_metadata([entry])['tt_links.txt'])
         self.assertNotIn('\\', entry['url'])
 
 
