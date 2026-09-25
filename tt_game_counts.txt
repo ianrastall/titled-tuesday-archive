@@ -447,3 +447,4 @@ titled-tuesday_2026-08-25.pgn: 2002
 titled-tuesday_2026-09-01.pgn: 2342
 titled-tuesday_2026-09-08.pgn: 2175
 titled-tuesday_2026-09-15.pgn: 2284
+titled-tuesday_2026-09-22.pgn: 2209
