@@ -29,10 +29,11 @@ Once that missing PGN is available, add `--write` to import it and regenerate
 metadata. The importer preserves the source file and its PGN bytes, verifies the
 ZIP, and refuses duplicate event dates/sessions. It supports these filename forms:
 
-- `YYMMDD[a|b]-titled-tuesday.pgn`
-- `titled-tuesday-YYYY-MM-DD[a|b].pgn` (legacy canonical)
 - `YYYY-titled-tuesday-blitz-month-DD[-early|-late].pgn`
-- `cc_titled-tuesday_YYMMDD[a|b].pgn` (current canonical)
+- `YYMMDD[a|b]-titled-tuesday.pgn`
+- `titled-tuesday_YYYY-MM-DD[a|b].pgn` (current canonical)
+- `titled-tuesday-YYYY-MM-DD[a|b].pgn` (legacy)
+- `cc_titled-tuesday_YYMMDD[a|b].pgn` (legacy standardized)
 
 Multiple file paths can follow `--import-pgn`. To rebuild metadata without adding
 PGNs, run `python archive_metadata.py --write`. Without `--write`, it only checks
