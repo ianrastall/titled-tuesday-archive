@@ -4948,5 +4948,16 @@
     "games": 2209,
     "url": "https://github.com/ianrastall/titled-tuesday-archive/raw/main/2026/titled-tuesday_2026-09-22.zip",
     "sha256": "15446848f307dad561bc5ee3d45bb527cb450d6f758897ddb809a8c0b3220b50"
+  },
+  {
+    "pgn": "titled-tuesday_2026-09-29.pgn",
+    "zip": "titled-tuesday_2026-09-29.zip",
+    "year": 2026,
+    "date": "2026-09-29",
+    "session": "",
+    "event": "2026 Titled Tuesday Blitz September 29",
+    "games": 2314,
+    "url": "https://github.com/ianrastall/titled-tuesday-archive/raw/main/2026/titled-tuesday_2026-09-29.zip",
+    "sha256": "9a3c9fe166883790f709f21ecb5fe78157297b8f681daccf8f3b41ce062992fc"
   }
 ]
