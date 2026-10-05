@@ -67,6 +67,7 @@ https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesda
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-05-17a.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-05-17b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-05-24a.zip
+https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-05-24b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-05-31a.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-05-31b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-06-07a.zip
@@ -74,6 +75,7 @@ https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesda
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-06-14a.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-06-14b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-06-21a.zip
+https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-06-21b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-06-28a.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-06-28b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2022/titled-tuesday_2022-07-05a.zip
@@ -339,9 +341,11 @@ https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesda
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-02-11a.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-02-11b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-02-18a.zip
+https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-02-18b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-02-25a.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-02-25b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-03-04a.zip
+https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-03-04b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-03-11a.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-03-11b.zip
 https://github.com/ianrastall/titled-tuesday-archive/raw/main/2025/titled-tuesday_2025-03-18a.zip

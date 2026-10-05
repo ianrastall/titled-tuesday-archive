@@ -67,6 +67,7 @@ titled-tuesday_2022-05-10b.pgn: 1184
 titled-tuesday_2022-05-17a.pgn: 440
 titled-tuesday_2022-05-17b.pgn: 440
 titled-tuesday_2022-05-24a.pgn: 1622
+titled-tuesday_2022-05-24b.pgn: 1109
 titled-tuesday_2022-05-31a.pgn: 832
 titled-tuesday_2022-05-31b.pgn: 799
 titled-tuesday_2022-06-07a.pgn: 573
@@ -74,6 +75,7 @@ titled-tuesday_2022-06-07b.pgn: 440
 titled-tuesday_2022-06-14a.pgn: 439
 titled-tuesday_2022-06-14b.pgn: 798
 titled-tuesday_2022-06-21a.pgn: 1412
+titled-tuesday_2022-06-21b.pgn: 1158
 titled-tuesday_2022-06-28a.pgn: 1529
 titled-tuesday_2022-06-28b.pgn: 1148
 titled-tuesday_2022-07-05a.pgn: 440
@@ -339,9 +341,11 @@ titled-tuesday_2025-02-04b.pgn: 2450
 titled-tuesday_2025-02-11a.pgn: 3564
 titled-tuesday_2025-02-11b.pgn: 2212
 titled-tuesday_2025-02-18a.pgn: 3451
+titled-tuesday_2025-02-18b.pgn: 2179
 titled-tuesday_2025-02-25a.pgn: 3321
 titled-tuesday_2025-02-25b.pgn: 2103
 titled-tuesday_2025-03-04a.pgn: 2962
+titled-tuesday_2025-03-04b.pgn: 1885
 titled-tuesday_2025-03-11a.pgn: 1834
 titled-tuesday_2025-03-11b.pgn: 1694
 titled-tuesday_2025-03-18a.pgn: 2239

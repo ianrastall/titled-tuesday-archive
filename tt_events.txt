@@ -67,6 +67,7 @@ titled-tuesday_2022-05-10b.pgn: Titled Tuesday Blitz May 10 Late 2022
 titled-tuesday_2022-05-17a.pgn: Titled Tuesday Blitz May 17 Early 2022
 titled-tuesday_2022-05-17b.pgn: Titled Tuesday Blitz May 17 Late 2022
 titled-tuesday_2022-05-24a.pgn: Titled Tuesday Blitz May 24 Early 2022
+titled-tuesday_2022-05-24b.pgn: 2022 Titled Tuesday Blitz May 24 Late
 titled-tuesday_2022-05-31a.pgn: Titled Tuesday Blitz May 31 Early 2022
 titled-tuesday_2022-05-31b.pgn: Titled Tuesday Blitz May 31 Late 2022
 titled-tuesday_2022-06-07a.pgn: Titled Tuesday Blitz June 07 Early 2022
@@ -74,6 +75,7 @@ titled-tuesday_2022-06-07b.pgn: Titled Tuesday Blitz June 07 Late 2022
 titled-tuesday_2022-06-14a.pgn: Titled Tuesday Blitz June 14 Early 2022
 titled-tuesday_2022-06-14b.pgn: Titled Tuesday Blitz June 14 Late 2022
 titled-tuesday_2022-06-21a.pgn: Titled Tuesday Blitz June 21 Early 2022
+titled-tuesday_2022-06-21b.pgn: 2022 Titled Tuesday Blitz June 21 Late
 titled-tuesday_2022-06-28a.pgn: Titled Tuesday Blitz June 28 Early 2022
 titled-tuesday_2022-06-28b.pgn: Titled Tuesday Blitz June 28 Late 2022
 titled-tuesday_2022-07-05a.pgn: Titled Tuesday Blitz July 05 Early 2022
@@ -339,9 +341,11 @@ titled-tuesday_2025-02-04b.pgn: February 04 Late 2025
 titled-tuesday_2025-02-11a.pgn: February 11 Early 2025
 titled-tuesday_2025-02-11b.pgn: February 11 Late 2025
 titled-tuesday_2025-02-18a.pgn: February 18 Early 2025
+titled-tuesday_2025-02-18b.pgn: 2025 Titled Tuesday Blitz February 18 Late
 titled-tuesday_2025-02-25a.pgn: February 25 Early 2025
 titled-tuesday_2025-02-25b.pgn: February 25 Late 2025
 titled-tuesday_2025-03-04a.pgn: March 4 Early 2025
+titled-tuesday_2025-03-04b.pgn: 2025 Titled Tuesday Blitz March 4 Late
 titled-tuesday_2025-03-11a.pgn: March 11 Early 2025
 titled-tuesday_2025-03-11b.pgn: March 11 Late 2025
 titled-tuesday_2025-03-18a.pgn: March 18 Early 2025
