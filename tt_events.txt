@@ -453,3 +453,4 @@ titled-tuesday_2026-09-08.pgn: 2026 Titled Tuesday Blitz September 08
 titled-tuesday_2026-09-15.pgn: 2026 Titled Tuesday Blitz September 15
 titled-tuesday_2026-09-22.pgn: 2026 Titled Tuesday Blitz September 22
 titled-tuesday_2026-09-29.pgn: 2026 Titled Tuesday Blitz September 29
+titled-tuesday_2026-10-06.pgn: 2026 Titled Tuesday Blitz October 06
